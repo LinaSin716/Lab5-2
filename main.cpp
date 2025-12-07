@@ -11,7 +11,11 @@ vector<string> FromFile() {
 	return v;
 }
 
-void PrintVector() {};
+void PrintVector(const vector<string>& lines) {
+	for (size_t i = 0; i < lines.size(); i++) {
+		cout << lines[i] << endl;
+	}
+}
 
 void ToNewFile() {};
 
@@ -19,8 +23,8 @@ int main() {
 
 	ifstream meowFile("meowFile.txt");
 
-	FromFile();
-	PrintVector();
+	vector<string> lines = FromFile();
+	PrintVector(lines);
 	ToNewFile();
 
 	return 0;
