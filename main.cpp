@@ -31,7 +31,7 @@ void ToNewFile(const vector<string>& lines, const string& file1) {
 int main() {
 
 	ifstream meowFile("meowFile.txt");
-	vector<string> lines = FromFile();
+	vector<string> lines = FromFile(meowFile);
 	
 	PrintVector(lines);
 	ToNewFile(lines, "new.txt");
