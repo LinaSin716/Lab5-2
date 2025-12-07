@@ -4,11 +4,15 @@
 #include <fstream>
 using namespace std;
 
-vector<string> FromFile() {
+vector<string> FromFile(ifstream& file) {
+	vector<string> textFromFile; 
 
-	// чтобы скомпилировалось: 
-	vector<string> v; 
-	return v;
+	string line;
+	while (getline(file, line)) {
+		textFromFile.push_back(line);
+	}
+
+	return textFromFile;
 }
 
 void PrintVector() {};
@@ -18,8 +22,8 @@ void ToNewFile() {};
 int main() {
 
 	ifstream meowFile("meowFile.txt");
+	vector<string> lines = FromFile(meowFile);
 
-	FromFile();
 	PrintVector();
 	ToNewFile();
 
