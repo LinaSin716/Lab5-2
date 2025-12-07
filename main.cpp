@@ -12,10 +12,6 @@ vector<string> FromFile(ifstream& file) {
 		textFromFile.push_back(line);
 	}
 
-	for (size_t i = 0; i < textFromFile.size(); i++) {
-		cout << textFromFile[i] << endl;
-	}
-
 	return textFromFile;
 }
 
